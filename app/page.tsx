@@ -1,12 +1,23 @@
+import { HeroSection } from "@/components/sections/hero-section"
+import { USPBlock } from "@/components/sections/usp-block"
+import { ServicesGrid } from "@/components/sections/services-grid"
+import { ProcessSection } from "@/components/sections/process-section"
+import { TrustSection } from "@/components/sections/trust-section"
+import { PricingCards } from "@/components/sections/pricing-cards"
+import { FAQSection } from "@/components/sections/faq-section"
+import { CTASection } from "@/components/sections/cta-section"
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold text-primary">
-        White-Label Typo3-Entwicklung für Agenturen
-      </h1>
-      <p className="mt-4 text-lg text-muted-foreground">
-        Zuverlässig, diskret, skalierbar
-      </p>
-    </main>
+    <>
+      <HeroSection />
+      <USPBlock />
+      <ServicesGrid />
+      <ProcessSection />
+      <TrustSection />
+      <PricingCards />
+      <FAQSection />
+      <CTASection />
+    </>
   )
 }

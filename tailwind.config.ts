@@ -10,17 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0f172a", // Dunkelblau/Anthrazit
-          50: "#f8fafc",
-          100: "#f1f5f9",
-          200: "#e2e8f0",
-          300: "#cbd5e1",
-          400: "#94a3b8",
-          500: "#64748b",
-          600: "#475569",
-          700: "#334155",
-          800: "#1e293b",
-          900: "#0f172a",
+          DEFAULT: "#0a0e27", // Sehr dunkles Blau
+          50: "#f0f1f9",
+          100: "#e1e3f3",
+          200: "#c3c7e7",
+          300: "#a5abdb",
+          400: "#878fcf",
+          500: "#6973c3",
+          600: "#4b57b7",
+          700: "#2d3bab",
+          800: "#0f1f9f",
+          900: "#0a0e27",
         },
         accent: {
           DEFAULT: "#06b6d4", // Türkis/Cyan
@@ -38,6 +38,45 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
+          "33%": { transform: "translateY(-30px) translateX(20px)" },
+          "66%": { transform: "translateY(20px) translateX(-20px)" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "0.3" },
+          "50%": { opacity: "0.6" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "200% center" },
+          "100%": { backgroundPosition: "-200% center" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "slide-in-from-bottom-4": {
+          from: { transform: "translateY(1rem)" },
+          to: { transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 10s ease-in-out infinite",
+        "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+        "shimmer": "shimmer 3s linear infinite",
+        "in": "fade-in 0.5s ease-out",
       },
     },
   },
