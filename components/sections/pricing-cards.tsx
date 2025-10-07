@@ -110,12 +110,9 @@ export function PricingCards() {
                   {"price" in model && model.price && (
                     <div className="mb-6 pb-6 border-b border-white/10">
                       <div className="flex items-baseline gap-2">
-                        <span className="text-5xl font-bold text-white">{model.price}</span>
-                        <span className="text-lg text-gray-400">{model.priceDetail}</span>
+                        <span className="text-5xl font-bold text-white">{model.price as string}</span>
+                        <span className="text-lg text-gray-400">{"priceDetail" in model ? (model.priceDetail as string) : ""}</span>
                       </div>
-                      {"priceNote" in model && model.priceNote && (
-                        <p className="mt-2 text-sm text-gray-400">{model.priceNote}</p>
-                      )}
                     </div>
                   )}
 
