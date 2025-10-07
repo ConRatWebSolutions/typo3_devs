@@ -106,6 +106,19 @@ export function PricingCards() {
                   {/* Title */}
                   <h3 className="text-2xl font-bold text-white mb-4">{model.name}</h3>
 
+                  {/* Price (if available) */}
+                  {"price" in model && model.price && (
+                    <div className="mb-6 pb-6 border-b border-white/10">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-5xl font-bold text-white">{model.price}</span>
+                        <span className="text-lg text-gray-400">{model.priceDetail}</span>
+                      </div>
+                      {"priceNote" in model && model.priceNote && (
+                        <p className="mt-2 text-sm text-gray-400">{model.priceNote}</p>
+                      )}
+                    </div>
+                  )}
+
                   {/* Description */}
                   <p className="text-sm leading-6 text-gray-400 min-h-[80px]">
                     {model.description}
@@ -132,15 +145,15 @@ export function PricingCards() {
                     {model.name === "Stundenabrechnung" && (
                       <>
                         <div className="flex items-center gap-2 text-sm text-gray-300">
-                          <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
                           Maximale Flexibilität
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-300">
-                          <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
                           Transparente Abrechnung
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-300">
-                          <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
                           Agile Entwicklung
                         </div>
                       </>

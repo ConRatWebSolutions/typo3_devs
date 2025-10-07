@@ -72,15 +72,17 @@ export const pricingContent = {
           "Monatliches Stundenkontingent zu vergünstigten Konditionen. Perfekt für laufende Betreuung und kontinuierliche Entwicklung.",
       },
       {
-        name: "Festpreis",
+        name: "Stundenabrechnung",
         description:
-          "Klare Projektdefinition mit festem Budget und Liefertermin. Ideal für klar definierte Projekte mit festen Anforderungen.",
+          "Abrechnung nach tatsächlichem Aufwand. Maximale Flexibilität bei sich ändernden Anforderungen.",
+        price: "ab 40€",
+        priceDetail: "Stundensatz",
         recommended: true,
       },
       {
-        name: "Stundenabrechnung",
+        name: "Festpreis",
         description:
-          "Abrechnung nach tatsächlichem Aufwand. Maximale Flexibilität bei sich ändernden Anforderungen. Transparente Stundensätze.",
+          "Klare Projektdefinition mit festem Budget und Liefertermin. Ideal für klar definierte Projekte mit festen Anforderungen.",
       },
     ],
   },

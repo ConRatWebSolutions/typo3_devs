@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -66,8 +67,15 @@ export function Header() {
       <nav className="mx-auto max-w-6xl bg-[#0a0e1a]/60 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl shadow-black/20" aria-label="Global">
         <div className="flex items-center justify-between px-6 py-3.5">
           {/* Logo */}
-          <div className="flex">
-            <a href="#hero" onClick={(e) => handleClick(e, "#hero")} className="group">
+          <div className="flex items-center gap-3">
+            <a href="#hero" onClick={(e) => handleClick(e, "#hero")} className="group flex items-center gap-3">
+              <Image
+                src="/logo.jpg"
+                alt="Some Solutions Logo"
+                width={40}
+                height={40}
+                className="rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
               <span className="text-base font-bold text-white group-hover:text-accent transition-all duration-300">
                 Typo3 für Agenturen
               </span>
