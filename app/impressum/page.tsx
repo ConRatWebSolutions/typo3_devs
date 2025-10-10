@@ -19,15 +19,22 @@ export default function ImpressumPage() {
 
         <div className="prose prose-lg prose-invert max-w-none">
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-accent mb-4">Angaben gemäß § 5 TMG</h2>
             <p className="text-gray-300 leading-relaxed">
               {impressumContent.company.name}
               <br />
               {impressumContent.company.street}
               <br />
               {impressumContent.company.city}
+            </p>
+            <p className="text-gray-300 leading-relaxed mt-4">
+              Handelsregister: {impressumContent.legal.registration}
               <br />
-              {impressumContent.company.country}
+              Registergericht: {impressumContent.legal.court}
+            </p>
+            <p className="text-gray-300 leading-relaxed mt-4">
+              <strong>Vertreten durch:</strong>
+              <br />
+              {impressumContent.legal.ceo}
             </p>
           </section>
 
@@ -37,29 +44,23 @@ export default function ImpressumPage() {
               Telefon: <a href={`tel:${impressumContent.contact.phone}`} className="text-accent hover:underline">{impressumContent.contact.phone}</a>
               <br />
               E-Mail: <a href={`mailto:${impressumContent.contact.email}`} className="text-accent hover:underline">{impressumContent.contact.email}</a>
-              <br />
-              Website: <a href={impressumContent.contact.website} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">{impressumContent.contact.website}</a>
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-accent mb-4">Vertreten durch</h2>
+            <h2 className="text-2xl font-semibold text-accent mb-4">Umsatzsteuer-ID</h2>
             <p className="text-gray-300 leading-relaxed">
-              Geschäftsführer: {impressumContent.legal.ceo}
+              Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
               <br />
-              Handelsregister: {impressumContent.legal.registration}
-              <br />
-              Registergericht: {impressumContent.legal.court}
-              <br />
-              Umsatzsteuer-ID: {impressumContent.legal.vatId}
+              {impressumContent.legal.vatId}
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-accent mb-4">
-              Haftung für Inhalte und Links
-            </h2>
-            <p className="text-gray-300 leading-relaxed">{impressumContent.disclaimer}</p>
+            <h2 className="text-2xl font-semibold text-accent mb-4">Verbraucher­streit­beilegung/Universal­schlichtungs­stelle</h2>
+            <p className="text-gray-300 leading-relaxed">
+              Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+            </p>
           </section>
         </div>
       </div>

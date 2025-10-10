@@ -2,7 +2,6 @@
 
 const navigation = {
   main: [
-    { name: "Startseite", href: "#hero" },
     { name: "Vorteile", href: "#vorteile" },
     { name: "Leistungen", href: "#leistungen" },
     { name: "Prozess", href: "#prozess" },

@@ -9,7 +9,6 @@ import { MobileNav } from "./mobile-nav"
 import { useContactModal } from "@/components/providers/contact-modal-provider"
 
 const navigation = [
-  { name: "Startseite", href: "#hero" },
   { name: "Vorteile", href: "#vorteile" },
   { name: "Leistungen", href: "#leistungen" },
   { name: "Prozess", href: "#prozess" },

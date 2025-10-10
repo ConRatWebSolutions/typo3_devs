@@ -31,8 +31,8 @@ const dashboardData = [
     label: "SKALIERBARKEIT",
     title: "Flexibel wachsen",
     description: "Skalieren Sie Ihr Team nach Bedarf - von einzelnen Entwicklern bis zu kompletten Projektteams.",
-    metric: "24/7",
-    subtext: "Support & Verfügbarkeit",
+    metric: "1 bis X",
+    subtext: "Entwickler je nach Projekt",
     chartType: "growth" as const, // Wachstumskurve
   },
 ]

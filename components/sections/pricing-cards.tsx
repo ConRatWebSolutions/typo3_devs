@@ -42,26 +42,26 @@ export function PricingCards() {
   }, [])
 
   return (
-    <section id="preise" className="py-24 sm:py-32 bg-[#0a0e1a] relative overflow-hidden">
+    <section id="preise" className="py-16 sm:py-20 bg-[#0a0e1a] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl" />
 
       <div ref={sectionRef} className="mx-auto max-w-7xl px-6 lg:px-8 relative">
-        <div className="mx-auto max-w-2xl lg:text-center mb-16">
+        <div className="mx-auto max-w-2xl lg:text-center mb-12">
           <h2 className="text-base font-semibold leading-7 text-accent uppercase tracking-wider">
             Preismodelle
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <p className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-4xl">
             Flexibel und transparent
           </p>
-          <p className="mt-4 text-lg leading-8 text-gray-300">
+          <p className="mt-3 text-base leading-7 text-gray-300">
             Wählen Sie das Abrechnungsmodell, das am besten zu Ihrem Projekt passt
           </p>
         </div>
 
         {/* Pricing Models - 3 Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 pt-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 pt-4">
           {pricingContent.pricingModels.models.map((model, index) => {
             const isVisible = visibleCards.includes(index)
             const Icon = iconMap[model.name as keyof typeof iconMap]
@@ -70,7 +70,7 @@ export function PricingCards() {
             return (
               <div
                 key={model.name}
-                className={`group relative p-8 rounded-3xl border transition-all duration-700 hover:-translate-y-2 ${
+                className={`group relative p-6 rounded-2xl border transition-all duration-700 hover:-translate-y-2 ${
                   isRecommended
                     ? 'border-accent/30 bg-[#151821]/80 backdrop-blur-xl shadow-2xl shadow-accent/20 hover:shadow-accent/30 lg:scale-105'
                     : 'border-white/10 bg-[#151821]/60 backdrop-blur-xl hover:border-white/20'
@@ -97,32 +97,32 @@ export function PricingCards() {
 
                 <div className="relative">
                   {/* Icon */}
-                  <div className={`inline-flex p-4 rounded-2xl mb-6 ${
+                  <div className={`inline-flex p-3 rounded-xl mb-4 ${
                     isRecommended ? 'bg-accent/20 ring-2 ring-accent/30' : 'bg-blue-500/10 ring-1 ring-blue-500/20'
                   }`}>
-                    <Icon className={`h-8 w-8 ${isRecommended ? 'text-accent' : 'text-blue-400'}`} />
+                    <Icon className={`h-6 w-6 ${isRecommended ? 'text-accent' : 'text-blue-400'}`} />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-4">{model.name}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">{model.name}</h3>
 
                   {/* Price (if available) */}
                   {"price" in model && model.price && (
-                    <div className="mb-6 pb-6 border-b border-white/10">
+                    <div className="mb-4 pb-4 border-b border-white/10">
                       <div className="flex items-baseline gap-2">
-                        <span className="text-5xl font-bold text-white">{model.price as string}</span>
-                        <span className="text-lg text-gray-400">{"priceDetail" in model ? (model.priceDetail as string) : ""}</span>
+                        <span className="text-4xl font-bold text-white">{model.price as string}</span>
+                        <span className="text-base text-gray-400">{"priceDetail" in model ? (model.priceDetail as string) : ""}</span>
                       </div>
                     </div>
                   )}
 
                   {/* Description */}
-                  <p className="text-sm leading-6 text-gray-400 min-h-[80px]">
+                  <p className="text-sm leading-6 text-gray-400 min-h-[70px]">
                     {model.description}
                   </p>
 
                   {/* Benefits based on model type */}
-                  <div className="mt-6 space-y-2">
+                  <div className="mt-4 space-y-1.5">
                     {model.name === "Festpreis" && (
                       <>
                         <div className="flex items-center gap-2 text-sm text-gray-300">
@@ -179,20 +179,20 @@ export function PricingCards() {
         </div>
 
         {/* CTA Section */}
-        <div className="mx-auto max-w-3xl text-center p-10 bg-[#151821]/60 backdrop-blur-xl rounded-3xl border border-white/10">
-          <h3 className="text-2xl font-bold text-white mb-4">
+        <div className="mx-auto max-w-3xl text-center p-8 bg-[#151821]/60 backdrop-blur-xl rounded-2xl border border-white/10">
+          <h3 className="text-xl font-bold text-white mb-3">
             {pricingContent.cta.title}
           </h3>
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-400 mb-6 text-sm">
             {pricingContent.cta.description}
           </p>
           <Button
             onClick={openContactModal}
             size="lg"
-            className="group bg-accent hover:bg-accent/90 text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-accent/50 rounded-lg inline-flex items-center justify-center gap-2 px-8 py-3"
+            className="group bg-accent hover:bg-accent/90 text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-accent/50 rounded-lg inline-flex items-center justify-center gap-2 px-6 py-2.5"
           >
             <span className="whitespace-nowrap">{pricingContent.cta.buttonText}</span>
-            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1 flex-shrink-0" />
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 flex-shrink-0" />
           </Button>
         </div>
       </div>

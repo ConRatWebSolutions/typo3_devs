@@ -75,7 +75,7 @@ export const pricingContent = {
         name: "Stundenabrechnung",
         description:
           "Abrechnung nach tatsächlichem Aufwand. Maximale Flexibilität bei sich ändernden Anforderungen.",
-        price: "ab 40€",
+        price: "ab 50€",
         priceDetail: "Stundensatz",
         recommended: true,
       },

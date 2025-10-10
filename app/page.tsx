@@ -2,6 +2,7 @@ import { HeroSection } from "@/components/sections/hero-section"
 import { USPBlock } from "@/components/sections/usp-block"
 import { ServicesGrid } from "@/components/sections/services-grid"
 import { ProcessSection } from "@/components/sections/process-section"
+import { ExpertiseSection } from "@/components/sections/expertise-section"
 import { TrustSection } from "@/components/sections/trust-section"
 import { PricingCards } from "@/components/sections/pricing-cards"
 import { FAQSection } from "@/components/sections/faq-section"
@@ -14,6 +15,7 @@ export default function Home() {
       <USPBlock />
       <ServicesGrid />
       <ProcessSection />
+      <ExpertiseSection />
       <TrustSection />
       <PricingCards />
       <FAQSection />
