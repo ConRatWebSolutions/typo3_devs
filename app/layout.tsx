@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        <script src="https://cloud.ccm19.de/app.js?apiKey=7614a1c71381479da7270f2be2afe5e6b5a96141648b472e&domain=68e8b19fa0947f8e490cd132" referrerPolicy="origin"></script>
+        <script async src="https://cloud.ccm19.de/app.js?apiKey=7614a1c71381479da7270f2be2afe5e6b5a96141648b472e&domain=68e8b19fa0947f8e490cd132" referrerPolicy="origin"></script>
       </head>
       <body className={`${inter.variable} font-sans bg-[#0a0e1a] text-white`}>
         <ContactModalProvider>
